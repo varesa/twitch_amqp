@@ -35,7 +35,7 @@ var exchange = "amqp.irc";
 var amqp = require("amqplib/callback_api");
 amqp.connect("amqp://" + rabbitmq_host, function (err, conn) {
     conn.createChannel(function (err, ch) {
-        ch.assertExchange(exchange, "fanout", {durable: false});
+        ch.assertExchange(exchange, "topic", {durable: false});
         rabbitmq_ch = ch;
     })
 });
