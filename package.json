@@ -1,0 +1,10 @@
+{
+  "name": "irc_rabbitmq",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+    "amqplib": "^0.4.1",
+    "tmi.js": "0.0.29",
+  }
+}
