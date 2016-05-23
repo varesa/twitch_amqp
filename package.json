@@ -5,6 +5,6 @@
   "scripts": {},
   "dependencies": {
     "amqplib": "^0.4.1",
-    "tmi.js": "0.0.29",
+    "tmi.js": "0.0.29"
   }
 }
