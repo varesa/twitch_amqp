@@ -30,7 +30,7 @@ client.connect();
 /* RabbitMQ */
 
 var rabbitmq_ch;
-var exchange = "amqp.irc.twitch-" + channel;
+var exchange = "amqp.irc;
 
 var amqp = require("amqplib/callback_api");
 amqp.connect("amqp://" + rabbitmq_host, function (err, conn) {
@@ -52,6 +52,6 @@ client.on("chat", function (channel, user, message, self) {
         time: time
     };
     if(rabbitmq_ch) {
-        rabbitmq_ch.publish(exchange, "", new Buffer(JSON.stringify(object)));
+        rabbitmq_ch.publish(exchange, "messages.twitch." + channel, new Buffer(JSON.stringify(object)));
     }
 });
