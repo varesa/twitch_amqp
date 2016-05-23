@@ -30,7 +30,7 @@ client.connect();
 /* RabbitMQ */
 
 var rabbitmq_ch;
-var exchange = "amqp.twitch." + channel;
+var exchange = "amqp.irc.twitch-" + channel;
 
 var amqp = require("amqplib/callback_api");
 amqp.connect("amqp://" + rabbitmq_host, function (err, conn) {
